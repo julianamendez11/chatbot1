@@ -4,7 +4,7 @@ from openai import OpenAI
 # Show title and description.
 st.title("💬 Cuesta's Data Team Skills AI Chatbot")
 st.write(
-    "This is a Cuesta chatbot that uses OpenAI's GPT-3.5 model to generate responses based on internal data"
+    "This is a Cuesta chatbot that uses OpenAI's GPT-3.5 model to generate responses based on internal data."
 )
 
 # Ask user for their OpenAI API key via `st.text_input`.
@@ -30,7 +30,7 @@ else:
 
     # Create a chat input field to allow the user to enter a message. This will display
     # automatically at the bottom of the page.
-    if prompt := st.chat_input("What is up?"):
+    if prompt := st.chat_input("Ask me anything related to the Cuesta's internal data?"):
 
         # Store and display the current prompt.
         st.session_state.messages.append({"role": "user", "content": prompt})
