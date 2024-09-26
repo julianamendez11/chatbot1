@@ -46,7 +46,7 @@ st.write(
 )
 
 # Carga el archivo de contexto al inicio (por ejemplo, un archivo .txt que contiene la información base)
-context_file_path = "archivo_contexto.txt"  # Ruta del archivo que contiene el contexto
+context_file_path = "User Skills - Data Viz_Pipeline_Warehouse.xlsx"  # Ruta del archivo que contiene el contexto
 try:
     with open(context_file_path, "r", encoding="utf-8") as file:
         context = file.read()
