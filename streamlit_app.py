@@ -1,6 +1,30 @@
 import streamlit as st
 from openai import OpenAI
 
+# CSS para fijar el logo en la parte superior derecha
+st.markdown(
+    """
+    <style>
+    .image-container {
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        z-index: 1;
+    }
+    .image-container img {
+        width: 150px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Coloca el logo en la parte superior
+with st.container():
+    st.markdown('<div class="image-container">', unsafe_allow_html=True)
+    st.image("cuesta-logo.png", use_column_width=False)
+    st.markdown('</div>', unsafe_allow_html=True)
+
 # Show title and description.
 st.title("💬 Cuesta's Data Team Skills AI Chatbot")
 st.write(
@@ -52,26 +76,3 @@ else:
         with st.chat_message("assistant"):
             response = st.write_stream(stream)
         st.session_state.messages.append({"role": "assistant", "content": response})
-
-st.markdown(
-"""
-<style>
-.image-container {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-.image-container img {
-    margin-right: 10px;
-}
-</style>
-""",
-unsafe_allow_html=True
-)
-
-with st.container():
-    st.markdown('<div class="image-container">', unsafe_allow_html=True)
-    st.image("cuesta-logo.png", use_column_width=False, width=250)
-    st.markdown('</div>', unsafe_allow_html=True)
