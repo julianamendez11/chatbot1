@@ -7,7 +7,7 @@ st.markdown(
     <style>
     .image-container {
         position: fixed;
-        top: 10px;
+        top: 9px;
         right: 20px;
         z-index: 1;
     }
@@ -26,7 +26,7 @@ with st.container():
     st.markdown('</div>', unsafe_allow_html=True)
 
 # Show title and description.
-st.title("💬 Cuesta's Data Team Skills AI Chatbot")
+st.title("Cuesta's Data Team Skills AI Chatbot")
 st.write(
     "This is a Cuesta chatbot that uses OpenAI's GPT-3.5 model to generate responses based on internal data."
 )
