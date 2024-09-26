@@ -55,5 +55,5 @@ else:
 
 # Add logo at the bottom of the page.
 st.markdown("<br><br><br>", unsafe_allow_html=True)  # Add some space before the logo
-logo_path = "C:/Users/julia/Downloads/cuesta-logo.png" 
+logo_path = "cuesta-logo.png" 
 st.image(logo_path, caption="Cuesta Data Team", use_column_width=True)
