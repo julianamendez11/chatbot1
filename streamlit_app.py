@@ -30,7 +30,7 @@ with st.container():
     st.markdown(
         """
         <div class="header-container">
-            <img src="cuesta-logo.png" alt="Cuesta Logo">
+            <img src="cuesta-logo.png">
             <h1> Cuesta's AI Chatbot</h1>
         </div>
         """, 
