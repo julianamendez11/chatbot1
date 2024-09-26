@@ -36,7 +36,7 @@ with st.container():
     st.markdown('<div class="header-container">', unsafe_allow_html=True)
     if logo:
         st.image(logo, use_column_width=False)
-    st.markdown('<h1>💬 Cuesta\'s Data Team Skills AI Chatbot</h1>', unsafe_allow_html=True)
+    st.markdown('<h1>Cuesta\'s AI Chatbot</h1>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
 # Descripción debajo del título y logo
