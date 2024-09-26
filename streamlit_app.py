@@ -1,35 +1,37 @@
 import streamlit as st
 from openai import OpenAI
 
-# CSS para posicionar el logo junto al título, sin espacio adicional
+# CSS para colocar la imagen encima del título, sin espacio entre ellos
 st.markdown(
     """
     <style>
     .header-container {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
         margin-bottom: 0px;
     }
     .header-container img {
         width: 150px;
-        margin-right: 10px;
+        margin-bottom: 0px;
     }
     h1 {
         margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Coloca el logo junto al título
+# Coloca el logo encima del título
 with st.container():
     st.markdown(
         """
         <div class="header-container">
             <img src="cuesta-logo.png" alt="Cuesta Logo">
-            <h1>Cuesta's AI Chatbot</h1>
+            <h1> Cuesta's AI Chatbot</h1>
         </div>
         """, 
         unsafe_allow_html=True
@@ -83,4 +85,5 @@ else:
         # Stream the response to the chat using `st.write_stream`, then store it in 
         # session state.
         with st.chat_message("assistant"):
-            response = st
+            response = st.write_stream(stream)
+        st.session_state.messages.append({"role": "assistant", "content": response})
