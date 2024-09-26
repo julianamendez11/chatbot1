@@ -29,7 +29,7 @@ with st.container():
         """
         <div class="header-container">
             <img src="cuesta-logo.png" alt="Cuesta Logo">
-            <h1>💬 Cuesta's Data Team Skills AI Chatbot</h1>
+            <h1>Cuesta's AI Chatbot</h1>
         </div>
         """, 
         unsafe_allow_html=True
