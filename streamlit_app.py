@@ -7,7 +7,7 @@ st.markdown(
     <style>
     .image-container {
         position: fixed;
-        top: 5px;
+        top: 1px;
         right: 20px;
         z-index: 1;
     }
